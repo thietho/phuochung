@@ -519,7 +519,7 @@ display:block;
 }
 
 #ben-maincontent{}
-.ben-two-columns #ben-maincontent{width: 750px;}
+.ben-two-columns #ben-maincontent{width: 670px;}
 .ben-three-columns #ben-maincontent{width:570px; margin-left:5px;}
 .ben-three-columns-right #ben-maincontent{width:520px; margin-right:20px}
 
@@ -570,21 +570,28 @@ display:block;
 
 
 /* Sections */
-.ben-section {margin-bottom: 10px; border:1px solid #DDDDDD}
+.ben-section {margin-bottom: 10px;}
 .ben-sidebar .ben-section{}
 #ben-maincontent .ben-section{}
 
 .ben-section-content{padding:5px 15px}
 .ben-sidebar .ben-section-content{padding:5px}
 #ben-maincontent .ben-section-content{padding:5px 10px}
-
+@font-face
+{
+	font-family:UTMAkashi;
+	src:url(UTMAkashi.ttf);	
+}
 .ben-section-title {
-	background-color: #F9F9F9;
-	border-top: 2px solid #DDD;
-	color: #7A7A7A;
-	font: bold 1.2em sans-serif;
+	background:url(../image/bg-section-title.png) repeat-x;
+	border-radius: 15px 0 15px 0;
+	color: #fff;
+	font: bold 1.2em ;
 	margin-bottom: 5px;
-	padding: 7px 10px 6px;
+	padding: 0px 20px 14px;
+	height:20px;
+	font-family:UTMAkashi;
+	font-size:1.8em;
 }
 .ben-sidebar .ben-section-title {margin-bottom: 8px;}
 #ben-maincontent .ben-section-title {margin-bottom: 8px;}
@@ -654,7 +661,7 @@ display:block;
 ul#menu, ul#menu ul {
   list-style-type:none;
   margin: 0;
-  padding:4px 17px;
+  padding:1px 17px;
   width: 162px;
 }
 
@@ -681,12 +688,23 @@ ul#menu li div {
 }
 
 ul#menu li div a{
-  color: #507414;
-  font-size:1.4em;
+	background:url(../image/icon-menu-left.png) no-repeat left 9px;
+  	color: #507414;
+  	font-size:1.4em;
+	padding-left:15px;
 }
+/*.icon-menu-left
+{
+	background:url(../image/icon-menu-left.png) no-repeat center top;
+	width:6px;
+	height:8px;
+	margin-top:8px;
+}*/
+
 
 ul#menu li div a:hover{
-  color: #fe4348;	
+  color: #fe4348;
+  background:url(../image/icon-menu-left.png) no-repeat left -21px;
 }
 
 ul#menu li div:hover{
@@ -702,8 +720,13 @@ ul#menu li ul li div {
 ul#menu li ul li a {
   color: #6a6c66;
   font-style:italic;
+  background:none;
+  padding:0;
 }
-
+ul#menu li ul li a:hover {
+  
+  background:none;
+}
 ul#menu li ul li ul li div {
   background: #F2F2F2;
   color: #000;
@@ -715,8 +738,7 @@ ul#menu li ul li ul li div a {
 }
 
 ul#menu li ul li div:hover {
-  background: #aaa;
-  border-left: 5px #000 solid;
+  
 }
 .number
 {
