@@ -38,7 +38,7 @@ class ControllerSitebarCatalogue extends Controller
 			if($item['moduleid'] != "group" && $item['moduleid'] != "homepage")
 			{
 				//$link='<a class="left" href="?route='.$item['moduleid']."&sitemapid=".$item['sitemapid'].'" title="[Detail]">'.$item['sitemapname'].'</a>';
-				$link = "<a  href='".$this->document->createLink($item['sitemapid'])."'>".$item['sitemapname']."</a>";
+				$link = "<a  href='".$this->document->createLink($item['sitemapid'])."'> > ".$item['sitemapname']."</a>";
 			}
 			
 			$str .= "<li>";
@@ -47,7 +47,7 @@ class ControllerSitebarCatalogue extends Controller
 			
 			if(count($childs) > 0)
 			{
-				$str .= "<span class='collape right'>[+]</span>";
+				//$str .= "<span class='collape ben-left'> > </span>";
 				$str .= '<div class="clearer">&nbsp;</div>';
 				$str .= "</div>";
 				

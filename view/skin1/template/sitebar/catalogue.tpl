@@ -1,11 +1,12 @@
 <script type='text/javascript' language='javascript' src='<?php echo HTTP_SERVER.DIR_VIEW?>js/menu-collapsed.js'></script>
-                    <div class="ben-section">
-                    	
-                        <div class="ben-section-content">
+                    <div id="left-menu">
+                    	<div id="left-menu-header"></div>
+                        <div id="left-menu-body">
                         	<ul id="menu">
                                 <?php echo $menu?>
                             </ul>
                         </div>
+                        <div id="left-menu-footer"></div>
                     </div>
 <script language="javascript">
 $(document).ready(function(){

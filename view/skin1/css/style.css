@@ -26,7 +26,7 @@ html {
 }
 
 body {
-	background:url(../image/bg-body.png) top center no-repeat;
+	background:url(../image/bg-body.png) top center no-repeat #5a8b0e;
 	color: #444;
 	font: normal 75% Arial, Tahoma, Helvetica, sans-serif;
 	line-height: 1.5;
@@ -382,7 +382,7 @@ input.ben-button:active {border-style: inset;}
 #ben-header 
 {
 	background:url(../image/bg-header.png) top center no-repeat;
-	height:224px;
+	height:618px;
 }
 
 /* Optional Top */
@@ -442,7 +442,7 @@ text-decoration:none;
 #ben-main-nav li{
 float:left;
 position:relative;
-margin-right:25px;
+margin-right:26px;
 }
 
 #ben-main-nav a.current-tab{
@@ -499,12 +499,24 @@ display:block;
 #ben-sub-nav li {margin: 0 1em;}
 #ben-sub-nav li.current-tab a {font-weight: bold;}
 
-
+#ben-banner
+{
+	width:998px;
+	position:absolute;
+	margin-top:225px;
+	margin-left:2px;
+}
 
 
 
 /*---------- BODY AREA ------------*/
-#ben-content {margin: 24px auto; width:1000px}
+#ben-content {
+	background:url(../image/bg-content.png) no-repeat 1px top #FFF;
+	margin: 0 auto; 
+	width:962px;
+	
+	
+}
 
 #ben-maincontent{}
 .ben-two-columns #ben-maincontent{width: 750px;}
@@ -514,7 +526,10 @@ display:block;
 
 /* Sidebar */
 #ben-sidebar{} /*Div chua 2 sidebar*/
-.ben-sidebar{width:210px;}
+.ben-sidebar{
+	width:210px;
+	margin:-40px 30px;
+}
 
 
 /* Columns */
@@ -573,9 +588,27 @@ display:block;
 }
 .ben-sidebar .ben-section-title {margin-bottom: 8px;}
 #ben-maincontent .ben-section-title {margin-bottom: 8px;}
-
-
-
+#left-menu
+{
+		
+}
+#left-menu-header
+{
+	background:url(../image/left-menu-header.png) no-repeat;
+	width:209px;
+	height:45px;	
+}
+#left-menu-body
+{
+	background:url(../image/left-menu-body.png) repeat-y;
+		
+}
+#left-menu-footer
+{
+	background:url(../image/left-menu-footer.png) no-repeat;
+	width:209px;
+	height:35px;	
+}
 
 
 
@@ -621,8 +654,8 @@ display:block;
 ul#menu, ul#menu ul {
   list-style-type:none;
   margin: 0;
-  padding: 0;
-  width: 100%;
+  padding:4px 17px;
+  width: 162px;
 }
 
 ul#menu a {
@@ -641,32 +674,34 @@ ul#menu li {
 }
 
 ul#menu li div {
-  background: #666666;
-  color: #FFF;	
-  padding: 0.4em;
+ 
+  color: #507414;	
+  padding: 1px;
+  font-family:"Times New Roman", Times, serif;
 }
 
 ul#menu li div a{
-  color: #FFF;	
+  color: #507414;
+  font-size:1.4em;
 }
 
-ul#menu li div a{
-  color: #FFF;	
+ul#menu li div a:hover{
+  color: #fe4348;	
 }
 
 ul#menu li div:hover{
-  background: #000;
-  color: #FFF;	
+  
+  color: #fe4348;	
 }
 
 ul#menu li ul li div {
-  background: #CCCCCC;
-  color: #000;
-  padding-left: 20px;
+  
+  
 }
 
 ul#menu li ul li a {
-  color: #FFF;
+  color: #6a6c66;
+  font-style:italic;
 }
 
 ul#menu li ul li ul li div {
