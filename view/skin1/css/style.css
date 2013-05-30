@@ -572,7 +572,7 @@ display:block;
 /* Sections */
 .ben-section {margin-bottom: 10px;}
 .ben-sidebar .ben-section{}
-#ben-maincontent .ben-section{}
+#ben-maincontent .ben-section{margin-top:-27px;}
 
 .ben-section-content{padding:5px 15px}
 .ben-sidebar .ben-section-content{padding:5px}
