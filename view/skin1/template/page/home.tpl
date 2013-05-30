@@ -8,7 +8,7 @@
 	<div class="ben-left" id="ben-maincontent">
     	<div class="ben-section">
         
-        	<div class=" ben-section-title">Homepage</div>
+        	<div class=" ben-section-title">Tin tức & sự kiện</div>
             
             <div class=" ben-section-content">
             
