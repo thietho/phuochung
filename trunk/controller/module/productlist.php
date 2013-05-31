@@ -117,7 +117,7 @@ class ControllerModuleProductlist extends Controller
 					'mediaid' => $media['mediaid'],
 					'title' => $media['title'],
 					'keyword' => $media['keyword'],
-					'summary' => $media['summary'],
+					'summary' => html_entity_decode($media['summary']),
 					'price' => $price,
 					'volume' => $volume,
 					'properties' => $properties,
