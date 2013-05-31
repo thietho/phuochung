@@ -6,11 +6,14 @@
                             	 <strong><a href="<?php echo $medias[0]['link']?>"><?php echo $medias[0]['title']?></a></strong></p>
                             	<a href="<?php echo $medias[0]['link']?>"><img src="<?php echo $medias[0]['imagethumbnail']?>" class="ben-left"/></a>
                                 <?php echo $medias[0]['summary']?>
+                                <br />
+                                <a href="<?php echo $medias[0]['link']?>" class="ben-readmore ben-right">Đọc thêm</a>
                                 <div class="clearer">&nbsp;</div>
+                                <div class="ben-hline"></div>
                                 <div class="ben-left ben-home-news-left">
                                 	<table>
                                     	<tr>
-                                        	<td class="news-title"><a href="<?php echo $medias[1]['link']?>"><?php echo $medias[1]['title']?></a></td>
+                                        	<td class="news-title" style="vertical-align:central !important"><a href="<?php echo $medias[1]['link']?>"><?php echo $medias[1]['title']?></a></td>
                                         </tr>
                                         <tr>
                                         	<td><a href="<?php echo $medias[1]['link']?>"><img src="<?php echo $medias[1]['imagethumbnail']?>"/></a></td>
@@ -20,6 +23,7 @@
                                         
                                     
                                 </div>
+                                <div class="ben-left ben-vline"></div>
                                 <div class="ben-left ben-home-news-left">
                                 	<table>
                                     	<tr>
@@ -30,6 +34,7 @@
                                         </tr>
                                     </table>
                                 </div>
+                                <div class="ben-left ben-vline"></div>
                                 <div class="ben-left ben-home-news-left">
                                 	<table>
                                     	<tr>
@@ -42,38 +47,22 @@
                                 </div>
                                 <div class="clearer">&nbsp;</div>
                             </td>
-                            <td>
+                            <td style="border-left:thin solid #e0dfdf;vertical-align:top;">
+                            	<ul>
+                            	<?php for($i=4;$i<count($medias);$i++){ ?>
+                                	<li>
+                                		<a href="<?php echo $medias[$i]['link']?>"><?php echo $medias[$i]['title']?></a>
+                                	</li>
+                                <?php } ?>
+                                </ul>
+                                <div class="ben-home-view-all-news">
+                                <a href="#"><strong>Xem tất cả</strong></a>
+                                </div>
                             </td>
                         </tr>
                     </table>
-                    <div>
+				</div>
+                   
                         
-<?php foreach($medias as $key => $media) {?>
-	
-                        <div class="ben-news-item ben-left">
-                        	<table>
-                            	<tr>
-                                	<td>
-                                    	<a href="<?php echo $media['link']?>"><img src="<?php echo $media['imagethumbnail']?>" /></a>
-                                        
-                                    </td>
-                                    <td>
-                                    	<p>
-                                            <strong><a href="<?php echo $media['link']?>"><?php echo $media['title']?></a></strong><br/>
-                                            <?php echo $this->string->getTextLength($media['summary'],0,15)?>...
-                                        </p>
-                                    	<p class="ben-right"><a class="ben-right do" href="<?php echo $media['link']?>">Chi tiết >></a></p>
-                            			<div class="clearer"></div>
-                                    </td>
-                                </tr>
-                            </table>                	
-                            
-                            
-                        </div>
-								
-<?php } ?>                	
-						<div class="clearer">&nbsp;</div>
-                    </div>
-                </div>
-                <div class="clearer">&nbsp;</div>
+
 							
