@@ -63,7 +63,7 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin: 0;}
 
 /* Links */
 a {
-	color: #000000;
+	color: #61980c;
 	text-decoration: none;
 	cursor:pointer;
 }
@@ -769,4 +769,24 @@ ul#menu li ul li div:hover {
 {
 	padding:10px;	
 }
-
+.ben-home-news-main
+{
+	font-size:1.4em;	
+}
+.ben-home-news-left
+{
+	width:33%;	
+}
+.ben-home-news-left .news-title
+{
+	height:4em;
+	font-weight:bold;
+}
+.ben-home-news-left td
+{
+	text-align:center;	
+}
+.ben-home-news-left img
+{
+	width:128px;	
+}

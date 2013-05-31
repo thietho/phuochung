@@ -7,12 +7,12 @@
     
 	<div class="ben-left" id="ben-maincontent">
     	<div class="ben-section">
-        
         	<div class=" ben-section-title">Tin tức & sự kiện</div>
-            
             <div class=" ben-section-content">
-            
-            	<?php echo $bannerhome?>
+            	<?php echo $newshome?>
+            </div>
+        	<div class=" ben-section-title">Sản phẩm mới</div>
+            <div class=" ben-section-content">
             	<?php echo $producthome?>
             </div>
             

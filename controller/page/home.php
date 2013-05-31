@@ -22,6 +22,21 @@ class ControllerPageHome extends Controller
 		
 			$arr = array("bannerhome",0,"",$template);
 			$this->data['bannerhome'] = $this->loadModule('module/block','getList',$arr);
+			
+			//Tin tuc moi
+			$template = array(
+						  'template' => "home/news_list.tpl",
+						  'width' => 150,
+						  'height' =>150,
+						  'paging' => false,
+						  'sorting' =>false
+						  );
+			
+			$medias = $this->getNews();
+			
+			$arr = array("",6,"",$template,$medias);
+			$this->data['newshome'] = $this->loadModule('module/productlist','index',$arr);
+			
 			//San pham moi
 			$template = array(
 						  'template' => "module/product_list.tpl",
@@ -65,6 +80,22 @@ class ControllerPageHome extends Controller
 		$this->data['rightsitebar']['cart'] = $this->loadModule('sitebar/cart');
 		$this->data['rightsitebar']['banner'] = $this->loadModule('sitebar/banner');
 		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');
+	}
+	
+	function getNews()
+	{
+		$this->load->model('core/sitemap');
+		$this->load->model('core/media');
+		$siteid = $this->member->getSiteId();
+		$sitemaps = $this->model_core_sitemap->getListByModule("module/news", $siteid);
+		$arrsitemapid = $this->string->matrixToArray($sitemaps,"sitemapid");
+		$queryoptions = array();
+		$queryoptions['mediaparent'] = '%';
+		$queryoptions['mediatype'] = '%';
+		$options['refersitemap'] = $arrsitemapid;
+		$data = $this->model_core_media->getPaginationList($options, $step=0, $to=15);
+		
+		return $data;
 	}
 	
 	function getProduct()
