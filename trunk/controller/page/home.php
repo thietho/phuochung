@@ -48,7 +48,7 @@ class ControllerPageHome extends Controller
 			
 			$medias = $this->getProduct();
 			
-			$arr = array("",6,"",$template,$medias);
+			$arr = array("",8,"",$template,$medias);
 			$this->data['producthome'] = $this->loadModule('module/productlist','index',$arr);
 			
 			/*$arr = array("gioithieu");
@@ -71,15 +71,15 @@ class ControllerPageHome extends Controller
 		$this->data['leftsitebar']['produtcategory'] = $this->loadModule('sitebar/catalogue','index',$arr);
 		$this->data['leftsitebar']['supportonline'] = $this->loadModule('sitebar/supportonline');
 		$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
-		$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
+		//$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
 		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
 		
 		//Rigth sitebar
-		$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
+		/*$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
 		$this->data['rightsitebar']['search'] = $this->loadModule('sitebar/search');
 		$this->data['rightsitebar']['cart'] = $this->loadModule('sitebar/cart');
 		$this->data['rightsitebar']['banner'] = $this->loadModule('sitebar/banner');
-		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');
+		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');*/
 	}
 	
 	function getNews()
