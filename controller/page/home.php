@@ -46,7 +46,7 @@ class ControllerPageHome extends Controller
 						  'sorting' =>false
 						  );
 			
-			$medias = $this->getProduct();
+			$medias = $this->getProduct('sanphammoi');
 			
 			$arr = array("",8,"",$template,$medias);
 			$this->data['producthome'] = $this->loadModule('module/productlist','index',$arr);
@@ -69,10 +69,24 @@ class ControllerPageHome extends Controller
 		//Left sitebar
 		$arr = array('sanpham');
 		$this->data['leftsitebar']['produtcategory'] = $this->loadModule('sitebar/catalogue','index',$arr);
+		$template = array(
+						  'template' => "sitebar/product_hot.tpl",
+						  'width' => 0,
+						  'height' =>159,
+						  'paging' => false,
+						  'sorting' =>false
+						  );
+			
+		$medias = $this->getProduct('sanphamhot');
+		
+		$arr = array("",8,"",$template,$medias);
+		$this->data['leftsitebar']['producthot'] = $this->loadModule('module/productlist','index',$arr);
+		$this->data['leftsitebar']['search'] = $this->loadModule('sitebar/searchproduct');
 		$this->data['leftsitebar']['supportonline'] = $this->loadModule('sitebar/supportonline');
-		$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
+		
+		//$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
 		//$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
-		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
+		//$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
 		
 		//Rigth sitebar
 		/*$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
@@ -98,7 +112,7 @@ class ControllerPageHome extends Controller
 		return $data;
 	}
 	
-	function getProduct()
+	function getProduct($status)
 	{
 		$this->load->model('core/sitemap');
 		$this->load->model('core/media');
@@ -109,6 +123,7 @@ class ControllerPageHome extends Controller
 		$queryoptions['mediaparent'] = '%';
 		$queryoptions['mediatype'] = '%';
 		$options['refersitemap'] = $arrsitemapid;
+		$options['groupkeys'] = $status;
 		$data = $this->model_core_media->getPaginationList($options, $step=0, $to=9);
 		
 		return $data;

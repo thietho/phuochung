@@ -1,30 +1,23 @@
 <div id="ben-footer">
-
-    <div class="ben-left" id="ben-footer-left">
+	<center>
+    	<div id="ben-footer-menu">
+        	<a href="#">Trang chủ</a><span>|</span><a href="#">Giới thiệu</a><span>|</span><a href="#">Sản phẩm</a><span>|</span><a href="#">Tin tức</a><span>|</span><a href="#">Bảng tin nhà nông</a><span>|</span><a href="#">Liên hệ</a>
+        </div>
+        <p>
+        	CÔNG  TY  TNHH  TM  -  SX  PHƯỚC  HƯNG<br />
+            379 Nguyễn Cửu Phú - Xã Tân Kiên - Bình Chánh - TP.HCM<br />
+            Tel: (08). 37600681- (08). 37600682     Fax: (08). 37604652<br />
+        </p>
         
-        <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>logo-small.gif" alt="" class="ben-left" />
-        
-        <p>&copy; 2010 Customer Name. All rights Reserved</p>
 
         <p class="ben-other">
-        	<a target="_blank" href="http://ben-solution.com">Website powered</a> by <a target="_blank" href="http://ben-solution.com">www.ben-solution.com</a></p>
+        	<a target="_blank" href="http://www.holansolutions.com">Website powered</a> by <a target="_blank" href="http://holansolutions.com.com">www.holansolutions.com</a></p>
         
         <div class="clearer">&nbsp;</div>
 
-    </div>
+    </center>
 
-    <!--<div class="ben-right" id="ben-footer-right">
-
-        <p class="ben-small">
-        	<a href="index.php?route=page/home">Home</a> <span class="ben-text-separator">|</span> 
-            <a href="index.php?route=pagesample/leftsidebar">Left Sidebar</a> <span class="ben-text-separator">|</span> 
-            <a href="index.php?route=pagesample/singlecolumn">Single Column</a> <span class="ben-text-separator">|</span> 
-            <a href="index.php?route=pagesample/threecolumn">Three Column</a> <span class="ben-text-separator">|</span> 
-            <strong><a href="index.php?route=pagesample/styledemo">Style Demo</a></strong> <span class="ben-text-separator">|</span> 
-            <a href="#top" class="ben-other">Page Top &uarr;</a>
-        </p>
     
-    </div>-->
 
     <div class="clearer">&nbsp;</div>
 
