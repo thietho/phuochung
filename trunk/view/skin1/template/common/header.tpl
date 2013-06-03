@@ -14,7 +14,7 @@
     
         </div>
         <div id="ben-banner">
-            <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>banner.jpg" />
+            <?php echo $bannerhome?>
         </div>
     </div>
     

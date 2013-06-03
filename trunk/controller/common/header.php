@@ -7,10 +7,16 @@ class ControllerCommonHeader extends Controller
 		$siteid = $this->member->getSiteId();
 		$this->load->model("core/media");
 		$this->load->model("core/sitemap");
-		$this->data['sitemap'] = $this->model_core_sitemap->getItem($sitemapid, $siteid);
-		$this->data['media'] = $this->model_core_media->getItem($siteid.$sitemapid);
-		$this->data['brand'] = $this->loadModule('common/brand');
-		$this->data['supportonline'] = html_entity_decode($this->data['media']['description']);
+		
+		//Banner home
+		$template = array(
+					  'template' => "home/bannerhome.tpl",
+					  'width' => 998,
+					  'height' =>0
+					  );
+	
+		$arr = array("bannerhome",0,"",$template);
+		$this->data['bannerhome'] = $this->loadModule('module/block','getList',$arr);
 		
 		$this->id="header";
 		$this->template="common/header.tpl";
