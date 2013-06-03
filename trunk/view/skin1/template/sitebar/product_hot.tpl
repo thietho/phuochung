@@ -35,6 +35,7 @@ $(document).ready(function(e) {
 
 function runbanner()
 {
+	
 	marqueeInit({
 		uniqueid: 'mycrawler',
 		style: {

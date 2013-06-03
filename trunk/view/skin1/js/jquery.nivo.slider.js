@@ -688,9 +688,11 @@
 			  at: "bottom",
 			  of: "#slider"
 			});
-			//alert($( ".nivo-controlNav" ).css("top"));
+			var top = Number($( ".nivo-controlNav" ).css('top').replace('px',''));
+			$( ".nivo-controlNav" ).css('top', top-20 + 'px');
+			//$( ".nivo-controlNav" ).css('{"top": "-=20px"}');
 			
-			$(".nivo-controlNav").animate({"top": "-=20px"}, "fast");
+			//$(".nivo-controlNav").animate({"top": "-=20px"}, "fast");
 		}
     };
 
