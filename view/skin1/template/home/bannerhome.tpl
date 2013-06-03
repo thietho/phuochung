@@ -5,8 +5,6 @@
         $(window).load(function () {
             $('#slider').nivoSlider();
         });
-		
-		
     });
 </script>
 <div class="container">
