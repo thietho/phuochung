@@ -18,7 +18,7 @@ class ControllerPageDetail extends Controller
 			$siteid = $this->member->getSiteId();
 			
 			
-			@	$id = $this->request->get['id'];
+			@$id = $this->request->get['id'];
 			
 			$this->document->breadcrumb = $this->model_core_sitemap->getBreadcrumb($this->document->sitemapid, $siteid, -1);
 			
@@ -33,6 +33,11 @@ class ControllerPageDetail extends Controller
 					break;
 					case "group":
 						$this->data['module'] = $this->loadModule('group/'.$this->document->sitemapid);
+						if($this->data['module'] == "error")
+						{
+							$data_child =  $this->model_core_sitemap->getListByParent($sitemap['sitemapid'], $siteid,$sitemap['status']);
+							$this->response->redirect($this->document->createLink($data_child[0]['sitemapid']));
+						}
 					break;
 					case "module/information":
 						$this->data['module'] = $this->loadModule('module/information');
@@ -230,17 +235,48 @@ class ControllerPageDetail extends Controller
 		//Left sitebar
 		$arr = array('sanpham');
 		$this->data['leftsitebar']['produtcategory'] = $this->loadModule('sitebar/catalogue','index',$arr);
+		$template = array(
+						  'template' => "sitebar/product_hot.tpl",
+						  'width' => 0,
+						  'height' =>159,
+						  'paging' => false,
+						  'sorting' =>false
+						  );
+			
+		$medias = $this->getProduct('sanphamhot');
+		
+		$arr = array("",8,"",$template,$medias);
+		$this->data['leftsitebar']['producthot'] = $this->loadModule('module/productlist','index',$arr);
+		$this->data['leftsitebar']['search'] = $this->loadModule('sitebar/searchproduct');
 		$this->data['leftsitebar']['supportonline'] = $this->loadModule('sitebar/supportonline');
-		$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
-		$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
-		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
+		
+		//$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
+		//$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
+		//$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
 		
 		//Rigth sitebar
-		$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
+		/*$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
 		$this->data['rightsitebar']['search'] = $this->loadModule('sitebar/search');
 		$this->data['rightsitebar']['cart'] = $this->loadModule('sitebar/cart');
 		$this->data['rightsitebar']['banner'] = $this->loadModule('sitebar/banner');
-		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');
+		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');*/
+	}
+	
+	function getProduct($status)
+	{
+		$this->load->model('core/sitemap');
+		$this->load->model('core/media');
+		$siteid = $this->member->getSiteId();
+		$sitemaps = $this->model_core_sitemap->getListByModule("module/product", $siteid);
+		$arrsitemapid = $this->string->matrixToArray($sitemaps,"sitemapid");
+		$queryoptions = array();
+		$queryoptions['mediaparent'] = '%';
+		$queryoptions['mediatype'] = '%';
+		$options['refersitemap'] = $arrsitemapid;
+		$options['groupkeys'] = $status;
+		$data = $this->model_core_media->getPaginationList($options, $step=0, $to=9);
+		
+		return $data;
 	}
 }
 ?>
