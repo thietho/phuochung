@@ -102,9 +102,8 @@
 
 .nivo-controlNav {
 	position:absolute;
-	right: 0;
-	bottom: 0px;
-    float: right;
+	
+    
 }
 .nivo-controlNav a {
 	display:block;
