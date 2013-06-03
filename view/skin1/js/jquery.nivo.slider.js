@@ -682,7 +682,16 @@
         afterChange: function () { },
         slideshowEnd: function () { },
         lastSlide: function () { },
-        afterLoad: function () { }
+        afterLoad: function () {
+			$( ".nivo-controlNav" ).position({
+			  my: "center",
+			  at: "bottom",
+			  of: "#slider"
+			});
+			//alert($( ".nivo-controlNav" ).css("top"));
+			
+			$(".nivo-controlNav").animate({"top": "-=20px"}, "fast");
+		}
     };
 
     $.fn._reverse = [].reverse;
