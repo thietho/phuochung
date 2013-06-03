@@ -176,7 +176,7 @@ abstract class Controller {
 			
 			return $controller->output;
 		} else {
-			exit('Error: Could not load controller ' . $module . '!');
+			return "error";
 		}
 		
 	}

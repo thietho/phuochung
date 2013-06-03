@@ -37,7 +37,7 @@ function sendMessage()
 </script>
 
 <div class="ben-post">
-<h3>Thông tin liên hệ</h3>
+
 <p>
     <?php echo $post['description']?>
 </p>
@@ -73,7 +73,7 @@ function sendMessage()
     <div class="ben-left">
     	<p>
             <label for="input-3"><?php echo $text_note?></label><br/>
-            <textarea name="description" id="description" class="ben-textbox" cols="65"></textarea>
+            <textarea name="description" id="description" class="ben-textbox" style="height: 179px;width: 395px;margin-left: 10px;"></textarea>
         </p>
         
     </div>

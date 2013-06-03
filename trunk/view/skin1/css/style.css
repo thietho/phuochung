@@ -450,7 +450,7 @@ text-decoration:none;
 #ben-main-nav li{
 float:left;
 position:relative;
-margin-right:26px;
+
 }
 
 #ben-main-nav a.current-tab{
@@ -464,8 +464,9 @@ margin-right:26px;
 #ben-main-nav ul {
 position:absolute;
 display:none;
-width:12em;
-top:2.1em;
+
+top:3em;
+background:#fff;
 }
 
 #ben-main-nav ul li{
@@ -473,7 +474,7 @@ margin-left:0px;
 }
 
 #ben-main-nav li ul a{
-width:12em;
+width:10em;
 height:auto;
 float:left;
 }
@@ -483,7 +484,7 @@ top:auto;
 }	
 
 #ben-main-nav li ul ul {
-left:12em;
+left:20em;
 margin:0px 0 0 10px;
 }
 
@@ -618,6 +619,11 @@ display:block;
 	height:20px;
 	font-family:UTMAkashi;
 	font-size:1.8em;
+}
+#ben-maincontent .ben-section-title a{
+	
+	color: #fff;
+	
 }
 #left-menu
 {
