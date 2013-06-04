@@ -155,21 +155,14 @@ $("#ben-next").click(function(){
                         </td>
                     </tr>
                     <tr>
-                    	<td><strong>Nhản hiệu:</strong></td>
+                    	<td><strong>Nhóm sản phẩm:</strong></td>
                         <td>
-                        	<?php foreach($nhanhieu as $it){ ?>
-                            <?php echo in_array($it['categoryid'],$properties)?"<a href='".$this->document->createLink('brandinfor',$it['categoryid'])."'>".$it['categoryname'].'</a><br />':''; ?>
+                        	<?php foreach($nhomsp as $it){ ?>
+                            <?php echo in_array($it['categoryid'],$properties)?$it['categoryname'].'<br />':''; ?>
                             <?php } ?>
                         </td>
                     </tr>
-                    <?php if(count($priceproduct) == 0){ ?>
-                    <tr>
-                    	<td><strong>Giá:</strong></td>
-                        <td>
-                        	<?php echo $this->string->numberFormate($post['price'])?> <?php echo $this->document->setup['Currency']?> <input type="button" class="ben-button" onclick="cart.add('<?php echo $post['mediaid']?>')" value="Đặt hàng">
-                        </td>
-                    </tr>
-                    <?php } ?>
+                    
                 </table>
             	
                 

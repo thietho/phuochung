@@ -99,9 +99,9 @@ class ControllerModulePagedetail extends Controller
 		$this->model_core_category->getTree("status",$this->data['statuspro']);
 		unset($this->data['statuspro'][0]);
 		
-		$this->data['nhanhieu'] = array();
-		$this->model_core_category->getTree("nhanhieu",$this->data['nhanhieu']);
-		unset($this->data['nhanhieu'][0]);
+		$this->data['nhomsp'] = array();
+		$this->model_core_category->getTree("nhomsp",$this->data['nhomsp']);
+		unset($this->data['nhomsp'][0]);
 		
 		$this->data['nhomhuong'] = array();
 		$this->model_core_category->getTree("nhomhuong",$this->data['nhomhuong']);
@@ -210,10 +210,10 @@ class ControllerModulePagedetail extends Controller
 		//$this->data['other'] = $this->loadModule('module/productlist','index',$arr);
 		//Load san phang cung hieu
 		$nhanhieuid = "";
-		foreach($this->data['nhanhieu'] as $nhanhieu)
+		foreach($this->data['nhomsp'] as $nhomsp)
 		{
-			if(in_array($nhanhieu['categoryid'],$this->data['properties']))
-				$nhanhieuid = $nhanhieu['categoryid'];
+			if(in_array($nhomsp['categoryid'],$this->data['properties']))
+				$nhanhieuid = $nhomsp['categoryid'];
 		}
 		$where = " AND mediaid not like '".$mediaid."'";
 		$arr = array($where,$nhanhieuid);
