@@ -242,7 +242,7 @@ ul.ben-tab-list li {float: left;}
 .ben-navigation
 {
 	position:absolute;
-	margin-top:162px;	
+	margin-top:168px;	
 	margin-left:55px;
 }
 .ben-navigation a {
@@ -390,7 +390,21 @@ input.ben-button:active {border-style: inset;}
 #ben-header 
 {
 	background:url(../image/bg-header.png) top center no-repeat;
-	height:618px;
+	height:564px;
+}
+.ben-sroll-bar
+{
+	position:fixed;
+	width:120px;
+	height:300px;	
+}
+#ben-sroll-left
+{
+	margin-left:984px;
+}
+#ben-sroll-right
+{
+	margin-left:-139px;
 }
 
 /* Optional Top */
@@ -431,8 +445,8 @@ z-index:100;
 display:block;
 padding:14px 22px;
 font-weight:bold;
-font-size:2em;
-font-family:"Times New Roman", Times, serif;
+font-size:1.7em;
+font-family:Arial, Helvetica, sans-serif;
 color:#585858;
 text-decoration:none;
 
@@ -615,10 +629,11 @@ display:block;
 	color: #fff;
 	font: bold 1.2em ;
 	margin-bottom: 5px;
-	padding: 0px 20px 14px;
+	padding: 3px 18px 14px;
 	height:20px;
-	font-family:UTMAkashi;
-	font-size:1.8em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	font-weight:bold;
 }
 #ben-maincontent .ben-section-title a{
 	
@@ -673,6 +688,7 @@ display:block;
 #ben-footer p {
 	color:#b4d55d;
 	margin:10px 0;
+	font-size:1.5em;
 }
 #ben-footer p a {
 	color:#b4d55d;

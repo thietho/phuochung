@@ -173,8 +173,8 @@ class ControllerPageDetail extends Controller
 						{
 							$template = array(
 											  'template' => "module/product_list.tpl",
-											  'width' => 150,
-											  'height' =>150,
+											  'width' => 100,
+											  'height' =>100,
 											  'paging' => true,
 											  'sorting' =>true
 											  );

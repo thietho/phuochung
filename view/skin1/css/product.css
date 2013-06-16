@@ -1,7 +1,7 @@
 .product
 {
-	width:155px;
-	height:234px;
+	width:122px;
+	height:160px;
 	border:thin solid #CCC;
 	border-radius:5px;
 	margin:4px;
@@ -105,16 +105,19 @@
 {
 	position:absolute;
 }
-
+#ben-icon-hot
+{
+	margin-top:20px;	
+}
 #ben-icon-sale
 {
-	margin-top:152px;	
+	margin-top:100px;	
 }
 
 #ben-icon-new
 {
-	margin-left:113px;
-	margin-top:140px;
+	margin-left:82px;
+	margin-top:100px;
 }
 
 .ben-icon-collection
