@@ -74,7 +74,7 @@ var HTTP_SERVER = '<?php echo HTTP_SERVER?>';
 			'transitionOut'	: 'elastic'
 		});
 
-		
+		$(this).scrollTop(500);
 	});
 </script>
 
@@ -84,6 +84,12 @@ var HTTP_SERVER = '<?php echo HTTP_SERVER?>';
     <?php echo $header?>
 	
 	<div id="ben-content">
+    	<div id="ben-sroll-left" class="ben-sroll-bar">
+            <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>left.jpg" />
+        </div>
+        <div id="ben-sroll-right" class="ben-sroll-bar">
+            <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>right.jpg" />
+        </div>
     	<?php echo $content?>
     </div>
     

@@ -1,9 +1,5 @@
 <div id="ben-header">
-    <div id="ben-top">
-       
-    
-        
-        
+    <div id="ben-top">        
         <div class="ben-navigation">
     
             <ul id="ben-main-nav">
