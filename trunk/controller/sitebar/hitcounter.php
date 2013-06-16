@@ -11,7 +11,7 @@ class ControllerSitebarHitcounter extends Controller
 	
 	public function getHitCounter()
 	{
-		$this->load->model("common/counter");
+		/*$this->load->model("common/counter");
 		// Kiểm tra xem counter có tồn tại hay chưa
 		// Nếu chưa sẽ tạo counter trong database = 0
 		$row=$this->model_common_counter->getCounter();
@@ -33,7 +33,7 @@ class ControllerSitebarHitcounter extends Controller
 			$counter=$row[0]['fieldvalue'];
 			//$this->response->redirect('intro.php');
 		}
-		$this->data['counterHit']=$counter;
+		$this->data['counterHit']=$counter;*/
 	}
 }
 ?>
