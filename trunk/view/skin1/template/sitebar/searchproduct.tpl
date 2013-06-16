@@ -37,12 +37,9 @@ $("#btnSearch").click(function(){
 	
 	if($("#loaisp").val() != "")
 		url += "[loaisp=" + $("#loaisp").val()+"]";
-	if($("#nhomhuong").val() != "")
-		url += "[nhomhuong="+ $("#nhomhuong").val()+"]";
-	if($("#nhanhieu").val() != "")
-		url += "[nhanhieu=" + $("#nhanhieu").val()+"]";
-	if($("#gia").val() != "")
-		url += "[gia=" + $("#gia").val()+"]";
+	if($("#nhomsp").val() != "")
+		url += "[nhomsp="+ $("#nhomsp").val()+"]";
+	
 	if($("#keyword").val() != "")
 		url += "[keyword=" + keyword+"]";
 	
