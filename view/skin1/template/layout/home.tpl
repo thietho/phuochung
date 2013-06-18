@@ -61,6 +61,7 @@ var HTTP_SERVER = '<?php echo HTTP_SERVER?>';
 <link rel="stylesheet" type="text/css" href="<?php echo HTTP_SERVER.DIR_CSS?>jquery.fancybox-1.3.4.css" media="screen" />
 
 <script type="text/javascript">
+var ctop =0;
 	$(document).ready(function() {
 		/*
 		*   Examples - images
@@ -75,7 +76,21 @@ var HTTP_SERVER = '<?php echo HTTP_SERVER?>';
 		});
 
 		$(this).scrollTop(500);
+		ctop = $(window).height() - 300 + $(this).scrollTop();
+		$('.ben-sroll-bar').css('top', ctop + 'px');
+		sitebarMove();
 	});
+function sitebarMove()
+{
+	ntop = $(window).height() - 300 + $(this).scrollTop();
+	move = ntop - ctop;
+	if(move != 0)
+		$('.ben-sroll-bar').animate({"top": "+="+ move +"px"}, "slow");
+	ctop = $(window).height() - 300 + $(this).scrollTop();
+	
+	setTimeout('sitebarMove()',1000);
+}
+
 </script>
 
 <body>
