@@ -394,7 +394,7 @@ input.ben-button:active {border-style: inset;}
 }
 .ben-sroll-bar
 {
-	position:fixed;
+	position:absolute;
 	width:120px;
 	height:300px;	
 }
@@ -443,9 +443,9 @@ z-index:100;
 
 #ben-main-nav a{
 display:block;
-padding:14px 22px;
+padding:14px 30px;
 font-weight:bold;
-font-size:1.7em;
+font-size:1.5em;
 font-family:Arial, Helvetica, sans-serif;
 color:#585858;
 text-decoration:none;
@@ -499,7 +499,7 @@ top:auto;
 
 #ben-main-nav li ul ul {
 left:20em;
-margin:0px 0 0 10px;
+
 }
 
 #ben-main-nav li:hover ul ul, #ben-main-nav li:hover ul ul ul, #ben-main-nav li:hover ul ul ul ul{
@@ -688,7 +688,7 @@ display:block;
 #ben-footer p {
 	color:#b4d55d;
 	margin:10px 0;
-	font-size:1.5em;
+	
 }
 #ben-footer p a {
 	color:#b4d55d;
