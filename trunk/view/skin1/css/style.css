@@ -242,8 +242,8 @@ ul.ben-tab-list li {float: left;}
 .ben-navigation
 {
 	position:absolute;
-	margin-top:168px;	
-	margin-left:55px;
+	margin-top:180px;	
+	margin-left:50px;
 }
 .ben-navigation a {
 	color: #888;
@@ -443,9 +443,9 @@ z-index:100;
 
 #ben-main-nav a{
 display:block;
-padding:14px 30px;
+padding:8px 12px;
 font-weight:bold;
-font-size:1.5em;
+font-size:1.2em;
 font-family:Arial, Helvetica, sans-serif;
 color:#585858;
 text-decoration:none;
@@ -479,8 +479,8 @@ position:relative;
 position:absolute;
 display:none;
 
-top:3em;
-background:#fff;
+top:2.5em;
+background:#00923f;
 }
 
 #ben-main-nav ul li{
@@ -491,6 +491,7 @@ margin-left:0px;
 width:10em;
 height:auto;
 float:left;
+color:#fff
 }
 
 #ben-main-nav ul ul{
@@ -498,7 +499,7 @@ top:auto;
 }	
 
 #ben-main-nav li ul ul {
-left:20em;
+left:14em;
 
 }
 
@@ -648,7 +649,16 @@ display:block;
 {
 	background:url(../image/left-menu-header.png) no-repeat;
 	width:209px;
-	height:45px;	
+	height:45px;
+	color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#left-menu-header div
+{
+	padding-top:13px;
+	padding-left:35px;
 }
 #left-menu-body
 {
