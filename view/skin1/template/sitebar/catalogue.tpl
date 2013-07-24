@@ -1,6 +1,6 @@
 <script type='text/javascript' language='javascript' src='<?php echo HTTP_SERVER.DIR_VIEW?>js/menu-collapsed.js'></script>
                     <div id="left-menu">
-                    	<div id="left-menu-header"></div>
+                    	<div id="left-menu-header"><div>SẢN PHẨM</div></div>
                         <div id="left-menu-body">
                         	<ul id="menu">
                                 <?php echo $menu?>
