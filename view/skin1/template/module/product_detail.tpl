@@ -139,7 +139,7 @@ $("#ben-next").click(function(){
      
     </div>
     <div class="ben-right product-right">
-        <h2><?php echo $post['title']?></h2>
+        <h2><?php echo strip_tags(html_entity_decode($post['title']))?></h2>
         <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo $post['link']?>" target="_blank">
     		<img src="<?php echo HTTP_SERVER.DIR_IMAGE?>facebook.gif" />
     	</a>
