@@ -23,3 +23,10 @@
     <div class="clearer">&nbsp;</div>
 
 </div>
+<script language="javascript">
+$(document).ready(function(e) {
+    $(this).scrollTop(500);
+	ctop = $(window).height() - 300 + $(this).scrollTop();
+	$('.ben-sroll-bar').css('top', ctop + 'px');
+});
+</script>
