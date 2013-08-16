@@ -75,9 +75,7 @@ var ctop =0;
 			'transitionOut'	: 'elastic'
 		});
 
-		$(this).scrollTop(500);
-		ctop = $(window).height() - 300 + $(this).scrollTop();
-		$('.ben-sroll-bar').css('top', ctop + 'px');
+		
 		sitebarMove();
 	});
 function sitebarMove()
