@@ -76,7 +76,7 @@ var ctop =0;
 		});
 
 		
-		sitebarMove();
+		
 	});
 function sitebarMove()
 {
