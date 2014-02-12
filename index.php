@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	ini_set("memory_limit","1500M");
 	include('system/config/directory.php');
 	$fdenial = false;
 	/*$ip = $_SERVER['REMOTE_ADDR'];
