@@ -4,7 +4,9 @@
                         	<td width="62%">
                             	<p class="ben-home-news-main">
                             	 <strong><a href="<?php echo $medias[0]['link']?>"><?php echo $medias[0]['title']?></a></strong></p>
+                                <?php if($medias[0]['imagethumbnail']){ ?>
                             	<a href="<?php echo $medias[0]['link']?>"><img src="<?php echo $medias[0]['imagethumbnail']?>" class="ben-left"/></a>
+                                <?php }?>
                                 <?php echo $medias[0]['summary']?>
                                 <br />
                                 <a href="<?php echo $medias[0]['link']?>" class="ben-readmore ben-right">Đọc thêm</a>
@@ -15,9 +17,11 @@
                                     	<tr>
                                         	<td class="news-title" style="vertical-align:central !important"><a href="<?php echo $medias[1]['link']?>"><?php echo $medias[1]['title']?></a></td>
                                         </tr>
+                                       	<?php if($medias[1]['imagethumbnail']){ ?> 
                                         <tr>
                                         	<td><a href="<?php echo $medias[1]['link']?>"><img src="<?php echo $medias[1]['imagethumbnail']?>"/></a></td>
                                         </tr>
+                                        <?php } ?>
                                     </table>
                                     	
                                         
@@ -29,9 +33,11 @@
                                     	<tr>
                                         	<td class="news-title"><a href="<?php echo $medias[2]['link']?>"><?php echo $medias[2]['title']?></a></td>
                                         </tr>
+                                        <?php if($medias[2]['imagethumbnail']){ ?>
                                         <tr>
                                         	<td><a href="<?php echo $medias[2]['link']?>"><img src="<?php echo $medias[2]['imagethumbnail']?>"/></a></td>
                                         </tr>
+                                        <?php } ?>
                                     </table>
                                 </div>
                                 <div class="ben-left ben-vline"></div>
@@ -40,9 +46,11 @@
                                     	<tr>
                                         	<td class="news-title"><a href="<?php echo $medias[3]['link']?>"><?php echo $medias[3]['title']?></a></td>
                                         </tr>
+                                        <?php if($medias[3]['imagethumbnail']){ ?>
                                         <tr>
                                         	<td><a href="<?php echo $medias[3]['link']?>"><img src="<?php echo $medias[3]['imagethumbnail']?>"/></a></td>
                                         </tr>
+                                        <?php } ?>
                                     </table>
                                 </div>
                                 <div class="clearer">&nbsp;</div>
