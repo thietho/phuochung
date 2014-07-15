@@ -99,7 +99,7 @@ class ControllerModuleProductlist extends Controller
 				$link = $this->document->createLink($sitemapid,$media['alias']);
 				$imagethumbnail = "";
 				
-				//if($media['imagepath'] != "" )
+				if($media['imagepath'] != "" )
 				{
 					$imagethumbnail = HelperImage::resizePNG($media['imagepath'], $template['width'], $template['height']);
 					$imagetpreview = HelperImage::resizePNG($media['imagepath'], $template['widthpreview'], $template['heightpreview']);
