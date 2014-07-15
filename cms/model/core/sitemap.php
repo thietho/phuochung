@@ -9,7 +9,7 @@ class ModelCoreSitemap extends Model
 							'module/news'=>'News',
 							//'module/event' => 'Event',
 							//'module/banner'=>'Banner',
-							//'module/album'=>'Album',
+							'module/album'=>'Album',
 							//'module/video'=>'Video',
 							//'module/audio'=>'Audio',
 							'module/product'=>'Product',
