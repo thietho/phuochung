@@ -273,7 +273,7 @@ class ControllerCorePostcontent extends Controller
 		$this->data['statusdate'] = $this->data['post']['statusdate'];
 		$this->data['statusby'] = $this->data['post']['statusby'];
 		$this->data['updateddate'] = $this->data['post']['updateddate'];*/
-		$listfile = $this->model_core_media->getInformation($this->data['mediaid'], "attachment");
+		$listfile = $this->model_core_media->getInformation($this->data['post']['mediaid'], "attachment");
 		$listfileid=array();
 		if($listfile)
 			$listfileid=split(",",$listfile);
@@ -285,6 +285,7 @@ class ControllerCorePostcontent extends Controller
 			if(!$this->string->isImage($this->data['attachment'][$key]['extension']))
 				$this->data['attachment'][$key]['imagethumbnail'] = DIR_IMAGE."icon/dinhkem.png";
 		}
+		
 		$this->data['status'] = $this->data['post']['status'];
 		if($this->data['status'] == "")
 		{
