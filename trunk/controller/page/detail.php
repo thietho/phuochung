@@ -248,6 +248,14 @@ class ControllerPageDetail extends Controller
 		$arr = array("",8,"",$template,$medias);
 		$this->data['leftsitebar']['producthot'] = $this->loadModule('module/productlist','index',$arr);
 		$this->data['leftsitebar']['search'] = $this->loadModule('sitebar/searchproduct');
+		$template = array(
+					  'template' => "sitebar/gallery.tpl",
+					  'width' => 198,
+					  'height' =>0
+					  );
+	
+		$arr = array("thu-vien",0,"",$template);
+		$this->data['leftsitebar']['imagecompany'] = $this->loadModule('module/block','getList',$arr);
 		$this->data['leftsitebar']['supportonline'] = $this->loadModule('sitebar/supportonline');
 		
 		//$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
