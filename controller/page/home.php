@@ -84,9 +84,9 @@ class ControllerPageHome extends Controller
 		$this->data['leftsitebar']['search'] = $this->loadModule('sitebar/searchproduct');
 		
 		$template = array(
-					  'template' => "sitebar/imagecompany.tpl",
+					  'template' => "sitebar/gallery.tpl",
 					  'width' => 198,
-					  'height' =>198
+					  'height' =>0
 					  );
 	
 		$arr = array("thu-vien",0,"",$template);
