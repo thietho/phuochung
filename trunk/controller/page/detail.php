@@ -48,14 +48,16 @@ class ControllerPageDetail extends Controller
 					case "module/banner":
 						if($id == "")
 						{
-							$template = array(
-											  'template' => "module/news_list.tpl",
-											  'width' => 180,
-											  'height' =>180
-											  );
-							$arr = array("",10,"",$template);
 							
-							$this->data['module'] = $this->loadModule('module/pagelist','getList',$arr);
+							$template = array(
+										  'template' => "sitebar/gallery.tpl",
+										  'width' => 520,
+										  'height' =>0
+										  );
+						
+							$arr = array($this->document->sitemapid,0,"",$template);
+							$this->data['module'] = $this->loadModule('module/block','getList',$arr);
+							
 						}
 						else
 						{
