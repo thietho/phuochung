@@ -41,7 +41,7 @@ var sagscroller2= new sagscroller({
 
                     <?php if($media['imagethumbnail'] !=""){ ?>
                         <li>
-                        <a href="<?php echo $media['link']?>"><img src='<?php echo $media['imagethumbnail']?>' /></a>
+                        <a href="<?php echo $this->document->createLink($sitemap['sitemapid'])?>"><img src='<?php echo $media['imagethumbnail']?>' /></a>
                         </li>
                     <?php }?>
            
