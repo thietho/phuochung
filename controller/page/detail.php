@@ -50,7 +50,7 @@ class ControllerPageDetail extends Controller
 						{
 							
 							$template = array(
-										  'template' => "sitebar/gallery.tpl",
+										  'template' => "module/banner_show.tpl",
 										  'width' => 520,
 										  'height' =>0
 										  );
