@@ -53,7 +53,7 @@
         display: block;
       }
   </style>
-<h2><?php echo $sitemap['sitemapname']?></h2>
+
 <div id="gallery" class="ad-gallery">
     <div class="ad-image-wrapper"></div>
     
@@ -62,8 +62,8 @@
             <ul class="ad-thumb-list">
             	<?php foreach($medias as $media) {?>
                 <li>
-                    <a href="<?php echo $val['imagepreview']?>">
-                    	<img src="<?php echo $media['imagethumbnail']?>" height="60px">
+                    <a href="<?php echo $media['imagethumbnail']?>">
+                    	<img src="<?php echo $media['imagethumbnail']?>" title="<?php echo $media['title']?>" alt="" height="60px">
                     </a>
                 </li>
                <?php } ?>
