@@ -44,7 +44,7 @@ function initialize(x,y,zoom)
     });
 	google.maps.event.addListener(markerobj, 'click', function() {
       infowindow.open(map,markerobj);
-	  
+	  toggleBounce(markerobj);
     });
 	
 	$('.chinhanh').each(function(index, element) {
@@ -63,11 +63,18 @@ function initialize(x,y,zoom)
 		});
 		google.maps.event.addListener(marker, 'click', function() {
 		  infowindow.open(map,marker);
-		  
+		  toggleBounce(marker);
 		});
     });
 }
+function toggleBounce(marker) {
 
+  if (marker.getAnimation() != null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
 
 </script>
 <div id="map_canvas" style="width: 100%; height: 500px;"></div>
