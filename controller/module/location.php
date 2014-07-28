@@ -56,9 +56,9 @@ class ControllerModuleLocation extends Controller
 		{
 			$mediaid = $this->user->getSiteId().$chinhanh;
 			$media = $this->model_core_media->getItem($mediaid);
-			$this->data['chinhanh'][$key]['x'] = $this->model_core_media->getInformation($mediaid, 'x');
-			$this->data['chinhanh'][$key]['y'] = $this->model_core_media->getInformation($mediaid, 'y');
-			$this->data['chinhanh'][$key]['desscription'] = $media['desscription'];
+			$this->data['chinhanhs'][$key]['x'] = $this->model_core_media->getInformation($mediaid, 'x');
+			$this->data['chinhanhs'][$key]['y'] = $this->model_core_media->getInformation($mediaid, 'y');
+			$this->data['chinhanhs'][$key]['description'] = html_entity_decode($media['description']);
 		}
 		
 		
