@@ -51,6 +51,18 @@ class ControllerModuleLocation extends Controller
 		if($this->data['location']['y']=="")
 			$this->data['location']['y']=108.277199;
 		
+		$arr = array("chi-nhanh-1","chi-nhanh-2","chi-nhanh-3");
+		foreach($arr as $key => $chinhanh)
+		{
+			$mediaid = $this->user->getSiteId().$chinhanh;
+			$media = $this->model_core_media->getItem($mediaid);
+			$this->data['chinhanh'][$key]['x'] = $this->model_core_media->getInformation($mediaid, 'x');
+			$this->data['chinhanh'][$key]['y'] = $this->model_core_media->getInformation($mediaid, 'y');
+			$this->data['chinhanh'][$key]['desscription'] = $media['desscription'];
+		}
+		
+		
+		
 		$this->id="location";
 		$this->template="module/location.tpl";
 		$this->render();
