@@ -262,7 +262,7 @@ class ControllerPageDetail extends Controller
 		
 		//$this->data['leftsitebar']['exchange'] = $this->loadModule('sitebar/exchange');
 		//$this->data['leftsitebar']['weblink'] = $this->loadModule('sitebar/weblink');
-		//$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
+		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');
 		
 		//Rigth sitebar
 		/*$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
