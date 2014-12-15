@@ -4,12 +4,14 @@
     
     <div class="ben-section-content">
     	<p>
-        	
-            <a title="shopify traffic stats" href="http://statcounter.com/shopify/" target="_blank">
-            	<img src="http://c.statcounter.com/10081670/0/32ff33a7/0/"alt="shopify traffic stats" style="border:none;">
-            </a>
+        	Tổng số lược truy cập: <?php echo $this->member->getHitCounter();?>
         </p>
-    	
+    	<p>
+        	Số người đang online: <?php echo $this->member->getOnline();?>
+        </p>
+    	<p>
+        	Tổng số lược truy cập trong tháng: <?php echo $this->member->getOnlineInMonth();?>
+        </p>
     	
     </div>
 
