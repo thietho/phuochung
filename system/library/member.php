@@ -245,6 +245,7 @@ final class Member {
 	{
 		$starttime = $this->date->getToday();
 		$sessionid = session_id();
+		
 		$username  = $this->username;
 		$ip = $_SERVER['REMOTE_ADDR'];
 		//kiem tra co id chua
@@ -286,11 +287,15 @@ final class Member {
 	
 	public function getHitCounter()
 	{
-				
-		$sql = "Select `user_stats`.* 
+		if(!isset($_SESSION['hitCounter']))
+		{
+			$sql = "Select `user_stats`.* 
 									from `user_stats`";
-		$query = $this->db->query($sql);
-		return count($query->rows);
+			$query = $this->db->query($sql);
+			$_SESSION['hitCounter'] = count($query->rows);	
+		}
+		return $_SESSION['hitCounter'];
+		
 	}
 	
 	public function getOnline()
@@ -310,7 +315,7 @@ final class Member {
 		$current_time = $this->date->getToday();
 		$year = $this->date->getYear($current_time);
 		$mon = $this->date->getMonth($current_time);
-		$sql = "SELECT  `user_stats` . * 
+		echo $sql = "SELECT  `user_stats` . * 
 						FROM  `user_stats` 
 						WHERE YEAR(`starttime`) =".$year."
 						AND MONTH(`starttime`) =".$mon;
