@@ -315,7 +315,7 @@ final class Member {
 		$current_time = $this->date->getToday();
 		$year = $this->date->getYear($current_time);
 		$mon = $this->date->getMonth($current_time);
-		echo $sql = "SELECT  `user_stats` . * 
+		$sql = "SELECT  `user_stats` . * 
 						FROM  `user_stats` 
 						WHERE YEAR(`starttime`) =".$year."
 						AND MONTH(`starttime`) =".$mon;
