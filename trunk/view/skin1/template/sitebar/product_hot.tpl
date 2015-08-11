@@ -29,13 +29,12 @@
 <script type="text/javascript">
 $(document).ready(function(e) {
 	
-    setTimeout('runbanner()',1000);
-	
+    //setTimeout('phrunbanner();',1000);
+	phrunbanner();
 });
 
-function runbanner()
+function phrunbanner()
 {
-	
 	marqueeInit({
 		uniqueid: 'mycrawler',
 		style: {
