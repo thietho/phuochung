@@ -10,9 +10,9 @@
     <div class="clearer">&nbsp;</div>
 </div>
 <div class="ben-hline"></div>
-<p>
+<div class="ben-editor">
     <?php echo $post['description']?>
-</p>
+</div>
 <p class="ben-text-right">
 	<b><?php echo $post['source']?></b>
 </p>

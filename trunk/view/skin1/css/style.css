@@ -826,7 +826,10 @@ ul#menu li ul li div:hover {
 	border:thin solid;
 	padding:5px;
 }
-
+.ben-editor img
+{
+	width:100%;
+}
 .ben-data-table td,th
 {
 	padding:10px;
