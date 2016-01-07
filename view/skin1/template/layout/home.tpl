@@ -80,11 +80,12 @@ var ctop =0;
 	});
 function sitebarMove()
 {
-	ntop = $(window).height() - 300 + $(this).scrollTop();
+	var bh = $('.ben-sroll-bar').height();
+	ntop = $(window).height() - bh + $(this).scrollTop();
 	move = ntop - ctop;
 	if(move != 0)
 		$('.ben-sroll-bar').animate({"top": "+="+ move +"px"}, "slow");
-	ctop = $(window).height() - 300 + $(this).scrollTop();
+	ctop = $(window).height() - bh + $(this).scrollTop();
 	
 	setTimeout('sitebarMove()',1000);
 }

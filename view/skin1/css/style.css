@@ -396,15 +396,15 @@ input.ben-button:active {border-style: inset;}
 {
 	position:absolute;
 	width:120px;
-	height:300px;	
+	
 }
 #ben-sroll-left
 {
-	margin-left:984px;
+	margin-left:-139px;
 }
 #ben-sroll-right
 {
-	margin-left:-139px;
+	margin-left:984px;
 }
 
 /* Optional Top */
