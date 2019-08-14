@@ -39,12 +39,14 @@ class ControllerPageHome extends Controller
 			
 			//San pham moi
 			$template = array(
-						  'template' => "module/product_list.tpl",
-						  'width' => 100,
-						  'height' =>100,
-						  'paging' => false,
-						  'sorting' =>false
-						  );
+				'template' => "module/product_list.tpl",
+				'width' => 100,
+				'height' =>100,
+				'paging' => false,
+				'sorting' =>false,
+				'widthpreview' => 800,
+				'heightpreview' =>800
+			);
 			
 			$medias = $this->getProduct('sanphammoi');
 			
@@ -70,12 +72,14 @@ class ControllerPageHome extends Controller
 		$arr = array('sanpham');
 		$this->data['leftsitebar']['produtcategory'] = $this->loadModule('sitebar/catalogue','index',$arr);
 		$template = array(
-						  'template' => "sitebar/product_hot.tpl",
-						  'width' => 0,
-						  'height' =>159,
-						  'paging' => false,
-						  'sorting' =>false
-						  );
+			'template' => "sitebar/product_hot.tpl",
+			'width' => 0,
+			'height' =>159,
+			'paging' => false,
+			'sorting' =>false,
+			'widthpreview' => 800,
+			'heightpreview' =>800
+		);
 			
 		$medias = $this->getProduct('sanphamhot');
 		

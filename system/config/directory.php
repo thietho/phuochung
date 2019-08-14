@@ -1,7 +1,7 @@
 <?php
 // HTTP
-define('HTTP_IMAGE', 'http://localhost:81/phuochung/file/');
-define('HTTP_SERVER', 'http://localhost:81/phuochung/');
+define('HTTP_IMAGE', 'http://'.$_SERVER['HTTP_HOST'].'/file/');
+define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // HTTPS
 define('HTTPS_SERVER', '');

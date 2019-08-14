@@ -1,7 +1,7 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://localhost:81/phuochung/cms/');
-define('HTTP_IMAGE', 'http://localhost:81/phuochung/file/');
+define('HTTP_SERVER', 'http://phanbondaubo.com/cms/');
+define('HTTP_IMAGE', 'http://phanbondaubo.com/file/');
 
 // HTTPS
 define('HTTPS_SERVER', '');

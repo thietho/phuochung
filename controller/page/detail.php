@@ -174,12 +174,14 @@ class ControllerPageDetail extends Controller
 						if($id == "")
 						{
 							$template = array(
-											  'template' => "module/product_list.tpl",
-											  'width' => 100,
-											  'height' =>100,
-											  'paging' => true,
-											  'sorting' =>true
-											  );
+								'template' => "module/product_list.tpl",
+								'width' => 100,
+								'height' =>100,
+								'paging' => true,
+								'sorting' =>true,
+								'widthpreview' => 800,
+								'heightpreview' =>800
+							);
 							$arr = array($this->document->sitemapid,25,"",$template);
 							$this->data['module'] = $this->loadModule('module/productlist','index',$arr);
 	
@@ -187,10 +189,12 @@ class ControllerPageDetail extends Controller
 						else
 						{
 							$template = array(
-										  'template' => "module/product_detail.tpl",
-										  'width' => 250,
-										  'height' =>250
-										  );
+								'template' => "module/product_detail.tpl",
+								'width' => 250,
+								'height' =>250,
+								'widthpreview' => 800,
+								'heightpreview' =>800
+							);
 							$arr = array($this->document->sitemapid,12,$template);
 							$this->data['module'] = $this->loadModule('module/pagedetail','getFormProduct',$arr);
 						}

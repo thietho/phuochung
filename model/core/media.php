@@ -510,8 +510,8 @@ class ModelCoreMedia extends ModelCoreFile
 			$newerlist = $this->model_core_media->getPaginationList($queryoptions, $newstep, $to);
 			$olderlist = $this->model_core_media->getPaginationList($queryoptions, $oldstep, $to);
 			
-			$newerid = (float)$medias[0]['id'];
-			$olderid = (float)$medias[$index]['id'];
+			$newerid = (float)$newerlist[0]['id'];
+			$olderid = (float)$newerlist[$index]['id'];
 			
 			if(count($newerlist) > 0 && $newstep >= 0)
 			{

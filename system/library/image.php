@@ -50,16 +50,17 @@ final class Image {
 		}
 		
 		switch ( $this->info['type'] ) {
-		  case IMAGETYPE_GIF:
-			imagegif($this->image , $output);
-		  break;
-		  case IMAGETYPE_JPEG:
-			@imagejpeg($this->image , $output);
-		  break;
-		  case IMAGETYPE_PNG:
-			imagepng($this->image , $output);
-		  break;
-		  default:
+			case IMAGETYPE_GIF:
+				@imagegif($this->image , $output);
+				break;
+			case IMAGETYPE_JPEG:
+				@imagejpeg($this->image , $output);
+				break;
+			case IMAGETYPE_PNG:
+				if(file_exists($this->file))
+					imagepng($this->image , $output);
+				break;
+			default:
 			return false;
 		}
 		

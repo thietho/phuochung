@@ -5,11 +5,13 @@ class ControllerLayoutHome extends Controller
 	{
 		$this->data['title'] = $this->document->title;
 		if($this->document->meta_description == "")
-			$this->data['meta_description'] = $this->document->setup['Description'];
+			$this->data['meta_description'] = $this->document->meta_description;
 		else
 			$this->data['meta_description'] = $this->document->meta_description;
 		if($this->document->meta_keyword == "")
-			$this->data['meta_keyword'] = $this->document->setup['Keyword'];
+		{
+			$this->data['meta_keyword'] = $this->document->meta_keyword;
+		}
 		else
 			$this->data['meta_keyword'] = $this->document->meta_keyword;
 		//
