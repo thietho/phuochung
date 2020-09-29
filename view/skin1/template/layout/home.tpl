@@ -98,12 +98,12 @@ function sitebarMove()
     <?php echo $header?>
 	
 	<div id="ben-content">
-    	<div id="ben-sroll-left" class="ben-sroll-bar">
+    	<!--<div id="ben-sroll-left" class="ben-sroll-bar">
             <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>left-tet.png" />
         </div>
         <div id="ben-sroll-right" class="ben-sroll-bar">
             <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>right-tet.png" />
-        </div>
+        </div>-->
     	<?php echo $content?>
     </div>
     
